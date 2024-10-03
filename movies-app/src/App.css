@@ -1,3 +1,4 @@
+
 .App {
   height: 100%;
   min-height: 400px;
@@ -12,6 +13,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .movie-title-filter {
+    margin: 10px;
+  }
+
+  .movie-price-filter {
+    margin: 10px;
+  }
+  
+  .movie-genre-filter {
+    min-width: 120px;
+  }
+
+  .filters-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    margin-top: 8px;
+  }
 }
 
 .App-heading {
@@ -55,7 +76,8 @@
   font-weight: bold;
 }
 
-.regularCard {
+/* Default styles for desktop */
+.card-container {
   border: 1px solid gray;
   border-radius: 4px;
   margin: 2px;
@@ -64,15 +86,56 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .movie-avatar {
+    width: 280px;
+    height: 280px;
+    margin: 5px;
+  }
+
+  .movie-name-container {
+    display: inline-block;
+    .movie-position {
+      font-weight: bold;
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
 }
 
-.smallCard {
-  border: 1px solid gray;
-  border-radius: 4px;
-  margin: 2px;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
+/* Tablet styles (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card-container {
+    .movie-avatar {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+/* Mobile styles (up to 600px) */
+@media (max-width: 600px) {
+  .card-container {
+    align-items: center;
+    justify-content: left;
+
+    .movie-avatar {
+      width: 60px;
+      height: 60px;
+    }
+
+    .movie-details-container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .movie-name-container {
+      display: flex;
+      .movie-position {
+        font-weight: bold;
+        display: inline-block;
+        max-width: 100%;
+      }
+    }
+  }
 }

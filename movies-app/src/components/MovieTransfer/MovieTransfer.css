@@ -1,0 +1,19 @@
+.movie-transfer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 32px;
+    max-width: 220px;
+
+    .select-target-label {
+        padding-top: 14px;
+    }
+
+    .transfer-button {
+        margin-top: 24px;
+    }
+
+    .required-message {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}

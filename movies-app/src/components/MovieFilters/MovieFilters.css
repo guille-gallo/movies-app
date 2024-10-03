@@ -1,0 +1,6 @@
+.movie-filters {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 32px;
+    max-width: 220px;
+}

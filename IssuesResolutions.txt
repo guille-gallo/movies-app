@@ -1,0 +1,24 @@
+-As required in item:
+    "6. Add a log (plain text file) with the issues that you faced during the test and how you solved them:"
+
+    Writing unit tests for Material-UI components using Jest can be particularly challenging,
+    due to the complex DOM structure and difficulty in reliably targeting elements. 
+    To address this and ensure robust test coverage, I opted for Cypress to perform end-to-end tests, 
+    as it allows for more seamless interaction with Material-UI components and better reflects real user behavior.
+
+-Additional issues solved on app first start up:
+1- Since the provided app works with Node v14, I had this issue when trying to start it from macOS:
+    SOLUTION:
+        Install Rosetta by running in the macOS Terminal:
+        softwareupdate --install-rosetta
+        arch -x86_64 zsh
+        nvm install lts/dubnium
+
+2- Missing /public directory with index.html:
+    SOLUTION:
+        Added /public/index.html
+
+3- Wrong id provided in index.html:
+    SOLUTION:
+        Change <div id="app"></div> to <div id="root"></div>
+        Because of render(<App/>, document.getElementById('root'))
