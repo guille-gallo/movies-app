@@ -13,8 +13,8 @@ const MovieTransfer = ({ filteredMovies, selectedMovie, targetStudioId, handleMo
             <Select
                 aria-label="Select Movie"
                 label="Select Movie"
-                value={selectedMovie ? selectedMovie.id : ""}  // Ensure value is either the movie ID or empty string
-                onChange={handleMovieSelect}  // Existing handleMovieSelect function
+                value={selectedMovie ? selectedMovie.id : ""}
+                onChange={handleMovieSelect}
                 className='movie-select-filter'
                 data-cy="movie-select"
             >
